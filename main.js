@@ -1,56 +1,42 @@
+
 const listaGaleria = document.querySelectorAll("div.gallery");
 const listaBotoes = document.querySelectorAll('.botao');
-let vigente = 0;
-
+let vigente = 1;
 listaGaleria[vigente].style.display = "block";
+listaBotoes[vigente].className += " on";
 
-for(let i=0; i < listaBotoes.length; i++ ){    
-    const botao = listaBotoes[i];
-    botao.onclick  = function(){
-         listaGaleria[vigente].style.display = "none";
-         listaGaleria[i].style.display = "block";
-         vigente = i;
-    }
+// proximo_slide(vigente);
+
+// for(let i=0; i < listaBotoes.length; i++ ){    
+//     let botao = listaBotoes[i];
+//     botao.onclick  =  function(){
+//          listaGaleria[vigente].style.display = "none";
+//          listaBotoes[vigente].className = listaBotoes[vigente].className.replace (" on","");
+         
+//          listaGaleria[i].style.display = "block";
+//          botao.className += " on";
+//          vigente = i;
+//     }
+// }
+
+setTimeout(proximo_slide, 3000);
+
+
+function proximo_slide(){
+    let slide_atual;
+    for(let i=0; i < listaGaleria.length; i++ ){ 
+        if(listaGaleria[i].style.display === "block"){  
+            slide_atual = i;
+            listaGaleria[slide_atual].style.display = "none";
+            listaBotoes[slide_atual].className  = listaBotoes[slide_atual].className.replace (" on","");
+            slide_atual = slide_atual + 1;
+            if(slide_atual >= listaBotoes.length) {slide_atual = 0;};               
+            listaGaleria[slide_atual].style.display = "block";
+            listaBotoes[slide_atual].className  +=" on" ;
+            break;
+        }
+    };
 }
 
+ 
 
-
-// alert( 'to aqui palhaço' );
-
-// let slideIndex = 1;
-// showSlides(slideIndex);
-
-// // Next/previous controls
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("gallery");
-//   let dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-// }
-
-
-
-// function carregaImagem(button, n){
-//     const listaGaleria = document.querySelectorAll("div.gallery");
-//     listaGaleria[n].style.display = "none";
-// }
-
-// var listaImagens = document.querySelectorAll('.imagem_carrocel');
