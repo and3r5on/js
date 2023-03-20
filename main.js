@@ -10,6 +10,7 @@ listaBotoes[vigente].className += " on";
 for(let i=0; i < listaBotoes.length; i++ ){    
     let botao = listaBotoes[i];
     botao.onclick  =  function(){
+         zera_tudo();
          listaGaleria[vigente].style.display = "none";
          listaBotoes[vigente].className = listaBotoes[vigente].className.replace (" on","");
          
@@ -19,17 +20,17 @@ for(let i=0; i < listaBotoes.length; i++ ){
     }
 }
 
-// while()
-// setTimeout(proximo_slide, 3000);
+setTimeout(proximo_slide, 3000);
 
 
 function proximo_slide(){
     let slide_atual;
     for(let i=0; i < listaGaleria.length; i++ ){ 
-        if(listaGaleria[i].style.display === "block"){  
+        if(listaGaleria[i].style.display === "block"){
+            zera_tudo();
             slide_atual = i;
-            listaGaleria[slide_atual].style.display = "none";
-            listaBotoes[slide_atual].className  = listaBotoes[slide_atual].className.replace (" on","");
+            // listaGaleria[slide_atual].style.display = "none";
+            // listaBotoes[slide_atual].className  = listaBotoes[slide_atual].className.replace (" on","");
             slide_atual = slide_atual + 1;
             if(slide_atual >= listaBotoes.length) {slide_atual = 0;};               
             listaGaleria[slide_atual].style.display = "block";
@@ -37,13 +38,21 @@ function proximo_slide(){
             break;
         }
     };
+    setTimeout(proximo_slide, 3000);
+}
+
+function zera_tudo(){
+    for(let i=0; i < listaBotoes.length; i++ ){
+        listaGaleria[i].style.display = "none";
+        listaBotoes[i].className = listaBotoes[i].className.replace (" on","");
+    }
 }
 
 function clicou(){
+    let botao;
     for(let i=0; i < listaBotoes.length; i++ ){    
-        let botao = listaBotoes[i];
-
-
+        botao = listaBotoes[i];
+        botao.onclick
     return true
      }
 }

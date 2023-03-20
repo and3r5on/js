@@ -4,7 +4,7 @@
 }
 
 div.gallery {
-    border: 1px solid forestgreen;
+    /* border: 1px solid forestgreen; */
     max-width: var(--max-width-gallery);
     display: none;
 }
@@ -20,7 +20,8 @@ div.gallery img {
 
 div.desc {
   padding: 15px;
-  text-align: center;
+  text-align: left;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 div.botoes{
@@ -38,9 +39,19 @@ div.botoes{
   box-sizing: border-box;
 }
 
-.cabecalho{
+a:link {
   text-decoration: none;
-  text-decoration-color: none;
+  color: white
+}
+
+.cabecalho{
+  background-color: black;
+}
+
+.cabecalho__texto{
+  text-decoration: none;
+  /* color: #0000; */
+  /* text-decoration-color: none; */
 }
 
 .tela_principal{
@@ -49,6 +60,12 @@ div.botoes{
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;    
+}
+
+.titulo_imagem{
+  color: gray; 
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .botao{
@@ -62,14 +79,16 @@ button{
   margin-top: 0.5rem;  
 }
 
-button:hover {
-  background-color: #3d3d3d; 
-  color: white;
-}
 
 .on {
   background-color: #3d3d3d; 
 }
+
+.off {
+  background-color: #3d3d3d; 
+  color: white;
+}
+
 
 .responsive {
   padding: 0 6px;
@@ -112,7 +131,7 @@ button:hover {
 /* tela login */
 .login_box{
   padding: 2rem;
-  border: solid 5px coral ;
+  /* border: solid 5px coral ; */
   max-width: var(--max-width-gallery);
   max-height: var(--max-width-gallery);
   margin-left: auto;
@@ -123,12 +142,10 @@ button:hover {
   box-sizing: border-box;
 }
 
-
 .button__login{
   text-align: center;
   min-width: 60px;
   max-width: 25%;
-  /* min-height: 10%; */
 }
 
 input[type=text], select, textarea {
@@ -142,20 +159,3 @@ input[type=password], select, textarea {
 body{
   margin: 0px;
 }
-
-
-/* The dots/bullets/indicators */
-/* .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-} */
