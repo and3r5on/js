@@ -4,7 +4,6 @@
 }
 
 div.gallery {
-    /* border: 1px solid forestgreen; */
     max-width: var(--max-width-gallery);
     display: none;
 }
@@ -25,7 +24,6 @@ div.desc {
 }
 
 div.botoes{
-  /* border: 2px solid red;  */
   height: 20%;
   
   max-width: var(--max-width-gallery);
@@ -50,8 +48,6 @@ a:link {
 
 .cabecalho__texto{
   text-decoration: none;
-  /* color: #0000; */
-  /* text-decoration-color: none; */
 }
 
 .tela_principal{
@@ -131,7 +127,6 @@ button{
 /* tela login */
 .login_box{
   padding: 2rem;
-  /* border: solid 5px coral ; */
   max-width: var(--max-width-gallery);
   max-height: var(--max-width-gallery);
   margin-left: auto;

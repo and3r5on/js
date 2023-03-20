@@ -5,8 +5,6 @@ let vigente = 1;
 listaGaleria[vigente].style.display = "block";
 listaBotoes[vigente].className += " on";
 
-// proximo_slide(vigente);
-
 for(let i=0; i < listaBotoes.length; i++ ){    
     let botao = listaBotoes[i];
     botao.onclick  =  function(){
