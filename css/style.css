@@ -1,6 +1,5 @@
-
 :root{
-  --max-width-gallery: 600px
+  --max-width-gallery: 700px
 }
 
 div.gallery {
@@ -8,12 +7,10 @@ div.gallery {
     display: none;
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
 
 div.gallery img {
   width: 100%;
+  align-items: center;
   height: auto;
 }
 
@@ -37,18 +34,37 @@ div.botoes{
   box-sizing: border-box;
 }
 
-a:link {
+a {
   text-decoration: none;
-  color: white
+}
+a:link {
+  color: white;
 }
 
-.cabecalho{
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
+
+.cabecalho {
   background-color: black;
 }
-
 .cabecalho__texto{
-  text-decoration: none;
+
+  padding: 7px 12px;
+
 }
+
 
 .tela_principal{
   display: flex;
