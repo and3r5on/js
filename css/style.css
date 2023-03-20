@@ -1,65 +1,101 @@
 
-
+:root{
+  --max-width-gallery: 600px
+}
 
 div.gallery {
-    border: 1px solid #ccc;
+    border: 1px solid forestgreen;
+    max-width: var(--max-width-gallery);
     display: none;
-  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
-  }
-  
-  div.desc {
-    padding: 15px;
-    text-align: center;
-  }
+}
 
-  div.botoes{
-    border: 2px solid red; 
-    display: flex;
-    gap: 3px;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
+div.gallery:hover {
+  border: 1px solid #777;
+}
 
-    
-  button:hover {
-    background-color: #3d3d3d; 
-    color: white;
-  }
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+div.botoes{
+  /* border: 2px solid red;  */
+  height: 20%;
   
+  max-width: var(--max-width-gallery);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.cabecalho{
+  text-decoration: none;
+  text-decoration-color: none;
+}
+
+.tela_principal{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;    
+}
+
+.botao{
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+button{
+  padding: 0.1rem;
+  margin-top: 0.5rem;  
+}
+
+button:hover {
+  background-color: #3d3d3d; 
+  color: white;
+}
+
+.on {
+  background-color: #3d3d3d; 
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
   .responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
+    width: 49.99999%;
+    margin: 6px 0;
   }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
   
-  @media only screen and (max-width: 700px) {
-    .responsive {
-      width: 49.99999%;
-      margin: 6px 0;
-    }
-  }
-  
-  @media only screen and (max-width: 500px) {
-    .responsive {
-      width: 100%;
-    }
-  }
-  
-  .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
   /* Fading animation */
 .efeito {
@@ -70,6 +106,41 @@ div.gallery {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+
+/* tela login */
+.login_box{
+  padding: 2rem;
+  border: solid 5px coral ;
+  max-width: var(--max-width-gallery);
+  max-height: var(--max-width-gallery);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  box-sizing: border-box;
+}
+
+
+.button__login{
+  text-align: center;
+  min-width: 60px;
+  max-width: 25%;
+  /* min-height: 10%; */
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+}
+
+input[type=password], select, textarea {
+  width: 100%;
+}
+
+body{
+  margin: 0px;
 }
 
 

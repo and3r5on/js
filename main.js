@@ -7,19 +7,20 @@ listaBotoes[vigente].className += " on";
 
 // proximo_slide(vigente);
 
-// for(let i=0; i < listaBotoes.length; i++ ){    
-//     let botao = listaBotoes[i];
-//     botao.onclick  =  function(){
-//          listaGaleria[vigente].style.display = "none";
-//          listaBotoes[vigente].className = listaBotoes[vigente].className.replace (" on","");
+for(let i=0; i < listaBotoes.length; i++ ){    
+    let botao = listaBotoes[i];
+    botao.onclick  =  function(){
+         listaGaleria[vigente].style.display = "none";
+         listaBotoes[vigente].className = listaBotoes[vigente].className.replace (" on","");
          
-//          listaGaleria[i].style.display = "block";
-//          botao.className += " on";
-//          vigente = i;
-//     }
-// }
+         listaGaleria[i].style.display = "block";
+         botao.className += " on";
+         vigente = i;
+    }
+}
 
-setTimeout(proximo_slide, 3000);
+// while()
+// setTimeout(proximo_slide, 3000);
 
 
 function proximo_slide(){
@@ -38,5 +39,11 @@ function proximo_slide(){
     };
 }
 
- 
+function clicou(){
+    for(let i=0; i < listaBotoes.length; i++ ){    
+        let botao = listaBotoes[i];
 
+
+    return true
+     }
+}
